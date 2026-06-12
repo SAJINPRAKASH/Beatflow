@@ -31,9 +31,12 @@ class CreditsScreen extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(width: 16),
-                    Text(
-                      'Credits & Contributors',
-                      style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: AppTheme.textPrimary),
+                    Expanded(
+                      child: Text(
+                        'Credits & Contributors',
+                        style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: AppTheme.textPrimary),
+                        overflow: TextOverflow.ellipsis,
+                      ),
                     ),
                   ],
                 ),
@@ -49,13 +52,14 @@ class CreditsScreen extends StatelessWidget {
                   borderRadius: 20,
                   padding: const EdgeInsets.all(16),
                   child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       NeumorphicBox(
                         shape: BoxShape.circle,
                         padding: const EdgeInsets.all(14),
                         child: Icon(Icons.person, color: AppTheme.textPrimary, size: 28),
                       ),
-                      const SizedBox(width: 16),
+                      const SizedBox(width: 12),
                       Expanded(
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -63,15 +67,19 @@ class CreditsScreen extends StatelessWidget {
                             Text(
                               'Sajin',
                               style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: AppTheme.textPrimary),
+                              overflow: TextOverflow.ellipsis,
                             ),
                             const SizedBox(height: 4),
                             Text(
                               'Architecture, Core UI, & Platform Integrations',
                               style: TextStyle(fontSize: 12, color: AppTheme.textSecondary),
+                              overflow: TextOverflow.ellipsis,
+                              maxLines: 2,
                             ),
                           ],
                         ),
                       ),
+                      const SizedBox(width: 12),
                       GestureDetector(
                         onTap: () async {
                           final Uri url = Uri.parse('https://www.instagram.com/___saji__n_?igsh=MXNld2RqYmVsamp0cg%3D%3D&utm_source=qr');

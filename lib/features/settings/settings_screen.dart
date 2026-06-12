@@ -249,7 +249,7 @@ class SettingsScreen extends ConsumerWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: GestureDetector(
                   onTap: () async {
-                    final Uri url = Uri.parse('https://docs.google.com/forms/d/e/1FAIpQLSfD3n57_n1V2fV5405060708090/viewform?usp=sf_link');
+                    final Uri url = Uri.parse('https://forms.gle/Ae5MXkK5AxDtNVhY9');
                     try {
                       if (!await launchUrl(url, mode: LaunchMode.externalApplication)) {
                         await launchUrl(url, mode: LaunchMode.platformDefault);
@@ -288,7 +288,7 @@ class SettingsScreen extends ConsumerWidget {
                     ),
                     const SizedBox(height: 2),
                     Text(
-                      'v1.0.0 – Premium Local Edition',
+                      'v1.1.001 – Premium Local Edition',
                       style: TextStyle(
                         fontSize: 11,
                         color: AppTheme.textSecondary,
