@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:url_launcher/url_launcher.dart';
 import '../../core/theme/neumorphic_theme.dart';
 import '../../services/database_service.dart';
 import '../home/home_screen.dart' show MusicPreferencesDialog;
@@ -238,6 +239,34 @@ class SettingsScreen extends ConsumerWidget {
                       subtitle: 'Meet the team behind BeatFlow',
                       icon: Icons.people_outline,
                       trailing: Icon(Icons.chevron_right, color: AppTheme.textPrimary),
+                    ),
+                  ),
+                ),
+              ),
+              // Support & Feedback Section
+              _buildSectionTitle('Support & Feedback'),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: GestureDetector(
+                  onTap: () async {
+                    final Uri url = Uri.parse('https://docs.google.com/forms/d/e/1FAIpQLSfD3n57_n1V2fV5405060708090/viewform?usp=sf_link');
+                    try {
+                      if (!await launchUrl(url, mode: LaunchMode.externalApplication)) {
+                        await launchUrl(url, mode: LaunchMode.platformDefault);
+                      }
+                    } catch (e) {
+                      debugPrint('Could not launch $url: $e');
+                    }
+                  },
+                  child: NeumorphicBox(
+                    borderRadius: 20,
+                    padding: const EdgeInsets.all(16),
+                    child: _buildSettingRow(
+                      context,
+                      title: 'Report a Bug / Send Feedback',
+                      subtitle: 'Help improve BeatFlow by sharing bugs and feedback',
+                      icon: Icons.bug_report_outlined,
+                      trailing: Icon(Icons.launch, color: AppTheme.textPrimary, size: 18),
                     ),
                   ),
                 ),

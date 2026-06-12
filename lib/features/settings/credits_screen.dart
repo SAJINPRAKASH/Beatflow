@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
 import '../../core/theme/neumorphic_theme.dart';
 
 class CreditsScreen extends StatelessWidget {
@@ -68,6 +70,27 @@ class CreditsScreen extends StatelessWidget {
                               style: TextStyle(fontSize: 12, color: AppTheme.textSecondary),
                             ),
                           ],
+                        ),
+                      ),
+                      GestureDetector(
+                        onTap: () async {
+                          final Uri url = Uri.parse('https://www.instagram.com/___saji__n_?igsh=MXNld2RqYmVsamp0cg%3D%3D&utm_source=qr');
+                          try {
+                            if (!await launchUrl(url, mode: LaunchMode.externalApplication)) {
+                              await launchUrl(url, mode: LaunchMode.platformDefault);
+                            }
+                          } catch (e) {
+                            debugPrint('Could not launch $url: $e');
+                          }
+                        },
+                        child: NeumorphicBox(
+                          shape: BoxShape.circle,
+                          padding: const EdgeInsets.all(10),
+                          child: FaIcon(
+                            FontAwesomeIcons.instagram,
+                            color: AppTheme.textPrimary,
+                            size: 20,
+                          ),
                         ),
                       ),
                     ],

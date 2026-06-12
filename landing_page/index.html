@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeatFlow - Tactile Music Player</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="logo">
+            <span class="logo-icon"><i class="fa-solid fa-compact-disc"></i></span>
+            <span class="logo-text">BeatFlow</span>
+        </div>
+        <nav class="nav-links">
+            <a href="#features">Features</a>
+            <a href="https://github.com/SAJINPRAKASH/Beatflow" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+            <a href="https://www.instagram.com/___saji__n_?igsh=MXNld2RqYmVsamp0cg%3D%3D&utm_source=qr" target="_blank" class="instagram-nav"><i class="fa-brands fa-instagram"></i> Instagram</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="badge">Version 1.0.0 is Live</div>
+            <h1>Tactile Music Curation.<br><span class="gradient-text">Zero Ads. Zero Accounts.</span></h1>
+            <p class="hero-desc">
+                A premium, open-source music player built for Android. Experience background playback, real-time downloads, a custom 5-band equalizer, and preference-guided discovery wrapped in a gorgeous, responsive neumorphic UI.
+            </p>
+            <div class="cta-buttons">
+                <!-- Point to build outputs path or release link -->
+                <a href="https://github.com/SAJINPRAKASH/Beatflow/releases/download/v1.0.0/app-release.apk" class="btn btn-primary">
+                    <i class="fa-solid fa-download"></i> Download APK v1.0.0
+                </a>
+                <a href="https://github.com/SAJINPRAKASH/Beatflow" target="_blank" class="btn btn-secondary">
+                    <i class="fa-brands fa-github"></i> View Source
+                </a>
+            </div>
+        </div>
+        
+        <!-- Tactile Cassette tape visualization in Neumorphic frame -->
+        <div class="hero-visual">
+            <div class="player-container">
+                <div class="cassette-tape">
+                    <div class="tape-label">
+                        <span class="tape-title">BeatFlow Mixtape</span>
+                        <span class="tape-subtitle">Stereo Playback</span>
+                    </div>
+                    <div class="tape-spools">
+                        <div class="spool left-spool"><div class="spool-teeth"></div></div>
+                        <div class="spool right-spool"><div class="spool-teeth"></div></div>
+                    </div>
+                    <div class="tape-center-window"></div>
+                </div>
+                <div class="player-controls">
+                    <span class="control-btn"><i class="fa-solid fa-backward-step"></i></span>
+                    <span class="control-btn play-btn"><i class="fa-solid fa-play"></i></span>
+                    <span class="control-btn"><i class="fa-solid fa-forward-step"></i></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+        <div class="section-header">
+            <h2>Crafted with Precision</h2>
+            <p>Every element designed for tactile elegance and seamless audio control.</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="icon-box"><i class="fa-solid fa-cloud-arrow-down"></i></div>
+                <h3>Offline Downloader</h3>
+                <p>High-speed audio extractor with cancelable tokens, retry loops, and live progress indicators.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon-box"><i class="fa-solid fa-sliders"></i></div>
+                <h3>5-Band Equalizer</h3>
+                <p>Tweak frequencies between -10dB and +10dB natively, featuring live response curve visualizer.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon-box"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                <h3>Personalized Discovery</h3>
+                <p>Preferences onboarding and smart query mix to customize your recommended feed automatically.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon-box"><i class="fa-solid fa-list-ol"></i></div>
+                <h3>Advanced Queue</h3>
+                <p>Play next, shuffle, repeat-one, and interactive list buffers with micro-animations.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon-box"><i class="fa-solid fa-circle-half-stroke"></i></div>
+                <h3>Tactile Styling</h3>
+                <p>Neumorphic pressed and raised styling designed to look responsive and feel alive.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon-box"><i class="fa-solid fa-shield-halved"></i></div>
+                <h3>Privacy First</h3>
+                <p>No telemetry, no tracking, and no cloud account required. Just pure offline-capable audio.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 BeatFlow Music. Built with <i class="fa-solid fa-heart" style="color: #E53935;"></i> by <a href="https://www.instagram.com/___saji__n_?igsh=MXNld2RqYmVsamp0cg%3D%3D&utm_source=qr" target="_blank">Sajin</a>.</p>
+            <div class="social-links">
+                <a href="https://github.com/SAJINPRAKASH/Beatflow" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.instagram.com/___saji__n_?igsh=MXNld2RqYmVsamp0cg%3D%3D&utm_source=qr" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
