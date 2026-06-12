@@ -259,7 +259,7 @@ class SettingsScreen extends ConsumerWidget {
                     ),
                     const SizedBox(height: 2),
                     Text(
-                      'v2.0.0 – Premium Local Edition',
+                      'v1.0.0 – Premium Local Edition',
                       style: TextStyle(
                         fontSize: 11,
                         color: AppTheme.textSecondary,
